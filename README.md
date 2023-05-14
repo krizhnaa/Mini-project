@@ -1,1 +1,2 @@
-Connecting Local repo to remote repo
+Things I have to do : 
+
