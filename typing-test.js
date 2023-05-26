@@ -106,15 +106,15 @@ function initTimer() {
         console.log(wpm)
         if(wpm >= 0 && wpm <= 20){
             alert('You Are Beginner Level')
-            window.location.href = "beginner.html"
+            window.location.href = "beginner/beginner.html"
         }
         else if(wpm >= 21 && wpm <= 40){
             alert('You Are Intermediate Level')
-            window.location.href = "intermediate.html"
+            window.location.href = "intermediate/intermediate.html"
         }
         else{
             alert('You Are Expert Level')
-            window.location.href = "expert.html"
+            window.location.href = "expert/expert.html"
         }
         }
     } else {
