@@ -104,16 +104,16 @@ function initTimer() {
         wpmTag.innerText = wpm;
         if(timeLeft === 0){
         console.log(wpm)
-        if(wpm >= 0 && wpm <= 30){
+        if(wpm >= 0 && wpm <= 20){
             alert('You Are Beginner Level')
             window.location.href = "beginner.html"
         }
-        else if(wpm >= 31 && wpm <= 50){
+        else if(wpm >= 21 && wpm <= 40){
             alert('You Are Intermediate Level')
             window.location.href = "intermediate.html"
         }
         else{
-            alert('You Are Pro Level')
+            alert('You Are Expert Level')
             window.location.href = "expert.html"
         }
         }
