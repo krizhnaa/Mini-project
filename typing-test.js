@@ -1,3 +1,50 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyBeY2P-0LgcGtOin9HhUmSphS9sr1hl3YQ",
+    authDomain: "mini-project-42789.firebaseapp.com",
+    databaseURL: "https://mini-project-42789-default-rtdb.firebaseio.com",
+    projectId: "mini-project-42789",
+    storageBucket: "mini-project-42789.appspot.com",
+    messagingSenderId: "1068784374082",
+    appId: "1:1068784374082:web:744db14d1976d4f2b6f8db",
+    measurementId: "G-4Q7SVERST4"
+  };
+  // import { getDatabase, ref, set } from "firebase/database";
+  // const db = getDatabase();
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const paragraphs = [
     "Authors often misinterpret the lettuce as a folklore rabbi, when in actuality it feels more like an uncursed bacon. Pursued distances show us how mother-in-laws can be charleses. Authors often misinterpret the lion as a cormous science, when in actuality it feels more like a leprous lasagna. Recent controversy aside, their band was, in this moment, a racemed suit. The clutch of a joke becomes a togaed chair. The first pickled chess is.",
     "In modern times the first scrawny kitten is, in its own way, an input. An ostrich is the beginner of a roast. An appressed exhaust is a gun of the mind. A recorder is a grade from the right perspective. A hygienic is the cowbell of a skin. Few can name a dun brazil that isn't a highbrow playroom. The unwished beast comes from a thorny oxygen. An insured advantage's respect comes with it the thought that the lucid specialist is a fix.",
@@ -33,7 +80,7 @@ wpmTag = document.querySelector(".wpm span"),
 cpmTag = document.querySelector(".cpm span");
 
 let timer,
-maxTime = 60,
+maxTime = 30,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
@@ -83,6 +130,7 @@ function initTyping() {
         wpmTag.innerText = wpm;
         mistakeTag.innerText = mistakes;
         cpmTag.innerText = charIndex - mistakes;
+        
     } else {
         clearInterval(timer);
         inpField.value = "";
@@ -95,6 +143,18 @@ function initTimer() {
         timeTag.innerText = timeLeft;
         let wpm = Math.round(((charIndex - mistakes)  / 5) / (maxTime - timeLeft) * 60);
         wpmTag.innerText = wpm;
+        if(timeLeft === 0){
+        console.log(wpm)
+        if(wpm >= 0 && wpm <= 30){
+            alert('You Are Beginner Level')
+        }
+        else if(wpm >= 31 && wpm <= 50){
+            alert('You Are Intermediate Level')
+        }
+        else{
+            alert('You Are Pro Level')
+        }
+        }
     } else {
         clearInterval(timer);
     }
@@ -115,4 +175,6 @@ function resetGame() {
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);
+
+
 
