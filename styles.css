@@ -1,7 +1,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(25deg, black);
+    background:  black;
 
     display: flex;
     justify-content: center;
@@ -24,8 +24,8 @@ html, body {
     width: 100%;
     height: 100%;
 
-    background-color: #370617;
-    box-shadow: 0 0 50px -20px #000;
+    background-color: black;
+    box-shadow: 0 0 50px -20px #fff;
     border-radius: 2%;
 
     overflow: hidden;

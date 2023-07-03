@@ -39,7 +39,7 @@ wpmTag = document.querySelector(".wpm span"),
 cpmTag = document.querySelector(".cpm span");
 
 let timer,
-maxTime = 10,
+maxTime = 20,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
@@ -105,15 +105,15 @@ function initTimer() {
         if(timeLeft === 0){
         console.log(wpm)
         if(wpm >= 0 && wpm <= 20){
-            alert('You Are Beginner Level')
+            alert('You Are at Beginner Level')
             window.location.href = "beginner/beginner.html"
         }
         else if(wpm >= 21 && wpm <= 40){
-            alert('You Are Intermediate Level')
+            alert('You Are at Intermediate Level')
             window.location.href = "intermediate/intermediate.html"
         }
         else{
-            alert('You Are Expert Level')
+            alert('You Are at Expert Level')
             window.location.href = "expert/expert.html"
         }
         }

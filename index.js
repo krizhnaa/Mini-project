@@ -102,7 +102,7 @@ function login() {
       auth.signInWithEmailAndPassword(email, password)
         .then(function () {
           // Redirect to typing-test.html after successful login
-          window.location.href = "typing-test.html";
+          window.location.href = "menu.html";
         })
         .catch(function (error) {
           // Handle login error
