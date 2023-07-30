@@ -1,11 +1,7 @@
 const paragraphs = [
-    'const typingText = document.querySelector(".typing-text p")\n' +
-    '  inpField = document.querySelector(".wrapper .input-field"),\n' +
-    '  tryAgainBtn = document.querySelector(".content button"),\n' +
-    '  timeTag = document.querySelector(".time span b"),\n' +
-    '  mistakeTag = document.querySelector(".mistake span"),\n' +
-    '  wpmTag = document.querySelector(".wpm span"),\n' +
-    '  cpmTag = document.querySelector(".cpm span");',
+    'function celsiusToFahrenheit(celsius)'+
+    'return celsius;', 
+    'const uniqueArray = removeDuplicates(originalArray);'
 ];
 
 
@@ -20,7 +16,7 @@ const typingText = document.querySelector(".typing-text p"),
     cpmTag = document.querySelector(".cpm span");
 
 let timer,
-    maxTime = 30,
+    maxTime = 20,
     timeLeft = maxTime,
     charIndex = mistakes = isTyping = 0;
 
