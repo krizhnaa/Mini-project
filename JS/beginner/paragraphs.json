@@ -1,0 +1,9 @@
+[
+    {
+      "text": "function celsiusToFahrenheit(celsius) return celsius;"
+    },
+    {
+      "text": "const uniqueArray = removeDuplicates(originalArray);"
+    }
+  ]
+  

@@ -1,12 +1,17 @@
-const paragraphs = [
-    'const typingText = document.querySelector(".typing-text p")\n' +
-    '  inpField = document.querySelector(".wrapper .input-field"),\n' +
-    '  tryAgainBtn = document.querySelector(".content button"),\n' +
-    '  timeTag = document.querySelector(".time span b"),\n' +
-    '  mistakeTag = document.querySelector(".mistake span"),\n' +
-    '  wpmTag = document.querySelector(".wpm span"),\n' +
-    '  cpmTag = document.querySelector(".cpm span");',
-];
+
+let paragraphs;
+
+fetch('paragraphs.json')
+  .then(response => response.json())
+  .then(data => {
+    paragraphs = data;
+    console.log('Fetched data:', paragraphs); 
+    loadParagraph();
+
+    inpField.addEventListener("input", initTyping);
+    tryAgainBtn.addEventListener("click", resetGame);
+  })
+  .catch(error => console.error('Error fetching data:', error));
 
 
 
@@ -20,21 +25,25 @@ const typingText = document.querySelector(".typing-text p"),
     cpmTag = document.querySelector(".cpm span");
 
 let timer,
-    maxTime = 30,
+    maxTime = 20,
     timeLeft = maxTime,
     charIndex = mistakes = isTyping = 0;
 
-function loadParagraph() {
-    const ranIndex = Math.floor(Math.random() * paragraphs.length);
-    typingText.innerHTML = "";
-    paragraphs[ranIndex].split("").forEach(char => {
-        let span = `<span>${char}</span>`
-        typingText.innerHTML += span;
-    });
-    typingText.querySelectorAll("span")[0].classList.add("active");
-    document.addEventListener("keydown", () => inpField.focus());
-    typingText.addEventListener("click", () => inpField.focus());
-}
+    function loadParagraph() {
+        const ranIndex = Math.floor(Math.random() * paragraphs.length);
+        const paragraphText = paragraphs[ranIndex].text;
+        
+        typingText.innerHTML = "";
+        paragraphText.split("").forEach(char => {
+          let span = `<span>${char}</span>`;
+          typingText.innerHTML += span;
+        });
+      
+        typingText.querySelectorAll("span")[0].classList.add("active");
+        document.addEventListener("keydown", () => inpField.focus());
+        typingText.addEventListener("click", () => inpField.focus());
+      }
+      
 
 function initTyping() {
     let characters = typingText.querySelectorAll("span");
@@ -85,17 +94,13 @@ function initTimer() {
         wpmTag.innerText = wpm;
         if (timeLeft === 0) {
             console.log(wpm)
-            if (wpm >= 0 && wpm <= 20) {
-                alert('You are Demoted to Beginner Level')
-                // window.location.href = "beginner/beginner.html"
-            }
-            else if (wpm >= 21 && wpm <= 40) {
-                alert('You are Keeping UP')
+            if (wpm >= 0 && wpm <= 25) {
+                alert('You have not improved')
                 // window.location.href = "beginner/beginner.html"
             }
             else {
-                alert('You Have Improved, Leveling You up to Expert level')
-                window.location.href = "../expert/expert.html"
+                alert('You Have Improved')
+                window.location.href = "../intermediate/intermediate.html"
             }
         }
     } else {

@@ -1,8 +1,17 @@
-const paragraphs = [
-    'function celsiusToFahrenheit(celsius)'+
-    'return celsius;', 
-    'const uniqueArray = removeDuplicates(originalArray);'
-];
+
+let paragraphs;
+
+fetch('paragraphs.json')
+  .then(response => response.json())
+  .then(data => {
+    paragraphs = data;
+    console.log('Fetched data:', paragraphs); 
+    loadParagraph();
+
+    inpField.addEventListener("input", initTyping);
+    tryAgainBtn.addEventListener("click", resetGame);
+  })
+  .catch(error => console.error('Error fetching data:', error));
 
 
 
@@ -20,17 +29,21 @@ let timer,
     timeLeft = maxTime,
     charIndex = mistakes = isTyping = 0;
 
-function loadParagraph() {
-    const ranIndex = Math.floor(Math.random() * paragraphs.length);
-    typingText.innerHTML = "";
-    paragraphs[ranIndex].split("").forEach(char => {
-        let span = `<span>${char}</span>`
-        typingText.innerHTML += span;
-    });
-    typingText.querySelectorAll("span")[0].classList.add("active");
-    document.addEventListener("keydown", () => inpField.focus());
-    typingText.addEventListener("click", () => inpField.focus());
-}
+    function loadParagraph() {
+        const ranIndex = Math.floor(Math.random() * paragraphs.length);
+        const paragraphText = paragraphs[ranIndex].text;
+        
+        typingText.innerHTML = "";
+        paragraphText.split("").forEach(char => {
+          let span = `<span>${char}</span>`;
+          typingText.innerHTML += span;
+        });
+      
+        typingText.querySelectorAll("span")[0].classList.add("active");
+        document.addEventListener("keydown", () => inpField.focus());
+        typingText.addEventListener("click", () => inpField.focus());
+      }
+      
 
 function initTyping() {
     let characters = typingText.querySelectorAll("span");
