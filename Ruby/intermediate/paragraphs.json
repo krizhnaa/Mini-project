@@ -1,0 +1,6 @@
+[
+    {
+      "text": "number_to_factorial = 5; result = 1; (1..number_to_factorial).each { |i| result *= i }; puts \"The factorial of #{number_to_factorial} is: #{result}\""
+    }
+  ]
+  

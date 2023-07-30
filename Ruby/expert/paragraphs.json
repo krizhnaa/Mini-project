@@ -1,0 +1,6 @@
+[
+    {
+      "text": "n = 10; a, b = 0, 1; (2..n-1).each { a, b = b, a + b }; puts \"The #{n}th Fibonacci number is: #{n <= 0 ? 'Invalid input! n must be a positive integer.' : (n == 1 ? 0 : b)}\""
+    }
+  ]
+  

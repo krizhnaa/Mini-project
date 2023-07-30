@@ -1,0 +1,6 @@
+[
+    {
+      "text": "int n = 10, a = 0, b = 1, c; for (int i = 2; i < n; i++) { c = a + b; a = b; b = c; } std::cout << \"The \" << n << \"th Fibonacci number is: \" << (n <= 0 ? \"Invalid input! n must be a positive integer.\" : (n == 1 ? 0 : b)) << std::endl;"
+    }
+  ]
+  

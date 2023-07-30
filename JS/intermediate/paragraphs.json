@@ -1,9 +1,6 @@
 [
     {
-      "text": "function celsiusToFahrenheit(celsius) return celsius;"
-    },
-    {
-      "text": "const uniqueArray = removeDuplicates(originalArray);"
+      "text": "function factorial(num) { if (num === 0 || num === 1) { return 1; } else { return num * factorial(num - 1); } } const numberToFactorial = 5; "
     }
   ]
   

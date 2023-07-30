@@ -1,0 +1,6 @@
+[
+    {
+      "text": "def factorial(num): if num == 0 or num == 1: return 1 else: return num * factorial(num - 1); number_to_factorial = 5; print(\"The factorial of {number_to_factorial} is: {factorial(number_to_factorial)}\")"
+    }
+  ]
+  

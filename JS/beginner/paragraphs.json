@@ -1,9 +1,9 @@
 [
     {
-      "text": "function celsiusToFahrenheit(celsius) return celsius;"
+      "text": "function addNumbers(a, b) { return a + b; }"
     },
     {
-      "text": "const uniqueArray = removeDuplicates(originalArray);"
+      "text": "const num1 = 10; const num2 = 5; console.log(`The sum of ${num1} and ${num2}`);"
     }
   ]
   

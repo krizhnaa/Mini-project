@@ -9,8 +9,8 @@
 
 body{
     display: flex;
-    flex-direction: column;
-    padding: 0 10px;
+    flex-direction: row;
+    padding: 0 100px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -25,6 +25,9 @@ h1{
 }
 
 #js-button{
+  position: relative;
+  top: 25px;
+  margin-right: 50px;
   outline: none;
   border: none;
   width: 150px;
@@ -42,6 +45,86 @@ h1{
 }
 
 #p-button{
+  position: relative;
+  top: 25px;
+  margin-right: 50px;
+  outline: none;
+  border: none;
+  width: 150px;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+  transition: transform 0.3s ease;
+  }
+  
+  #p-button:active{
+    transform: scale(0.97);
+  }
+
+  #c-button{
+    position: relative;
+    top: 25px;
+    margin-right: 50px;
+    outline: none;
+    border: none;
+    width: 150px;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    transition: transform 0.3s ease;
+  }
+  
+  #c-button:active{
+    transform: scale(0.97);
+  }
+
+  #ja-button{
+    position: relative;
+    top: 25px;
+    margin-right: 50px;
+    outline: none;
+    border: none;
+    width: 150px;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    transition: transform 0.3s ease;
+  }
+  
+  #ja-button:active{
+    transform: scale(0.97);
+  }
+
+  #rjs-button{
+    position: relative;
+    top: 25px;
+    margin-right: 50px;
+    outline: none;
+    border: none;
+    width: 150px;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    transition: transform 0.3s ease;
+  }
+  
+  #rjs-button:active{
+    transform: scale(0.97);
+  }
+
+  #ry-button{
     position: relative;
     top: 25px;
     outline: none;
@@ -56,6 +139,6 @@ h1{
     transition: transform 0.3s ease;
   }
   
-  #p-button:active{
+  #ry-button:active{
     transform: scale(0.97);
   }

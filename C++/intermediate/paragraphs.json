@@ -1,0 +1,6 @@
+[
+    {
+      "text": "int numberToFactorial = 5, result = 1; for (int i = 1; i <= numberToFactorial; i++) result *= i; std::cout << \"The factorial of \" << numberToFactorial << \" is: \" << result << std::endl;"
+    }
+  ]
+  
