@@ -94,13 +94,13 @@ function initTimer() {
         wpmTag.innerText = wpm;
         if (timeLeft === 0) {
             console.log(wpm)
-            if (wpm >= 0 && wpm <= 25) {
-                alert('You have not improved')
+            if (wpm >= 25 && wpm <= 45) {
+                alert('You are still an Intermediate')
                 // window.location.href = "beginner/beginner.html"
             }
             else {
                 alert('You Have Improved')
-                window.location.href = "../intermediate/intermediate.html"
+                window.location.href = "../expert/intermediate.html"
             }
         }
     } else {
